@@ -1,0 +1,23 @@
+{
+  "name": "weldnet-vclient",
+  "version": "1.0.0",
+  "description": "Welnet Vanilla Client side version",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheensol/WeldNet-VClient.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sheensol/WeldNet-VClient/issues"
+  },
+  "homepage": "https://github.com/sheensol/WeldNet-VClient#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
