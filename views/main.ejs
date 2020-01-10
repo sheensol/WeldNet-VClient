@@ -1,118 +1,183 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>WeldNet</title>
-    <!-- Main Style Css -->
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="stylesheet" href="css/custom.css" type="text/css"/>
-    <script src="js/helper.js"></script>
-</head>
-<body>
-<script>
-    var user =  window.localStorage.getItem('weld_user');
-    var token = readCookie("weld_token");
-    if(token != null) {
-        var test ='';
-    window.location.href="http://localhost/vanilajs/dashboard.html"
-    }
-</script>
-<div class="wrap">
-    <form class="forget-form" action="">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <form class="forget-form" action="">
         <div class="alert alert-success"></div>
         <div class="alert alert-danger"></div>
         <div class="form-header">
-            <h3>Forget Password</h3>
+          <h3>Forget Password</h3>
         </div>
         <!--Email Input-->
         <div class="form-group">
-            <input type="email"  name="Email" id="fog_Email" class="form-input" placeholder="email@example.com" required  data-pristine-required-message="Enter Valid Email Address">
+          <input
+            type="email"
+            name="Email"
+            id="fog_Email"
+            class="form-input"
+            placeholder="email@example.com"
+            required
+            data-pristine-required-message="Enter Valid Email Address"
+          />
         </div>
 
         <!--Login Button-->
         <div class="form-group">
-            <button class="form-button" type="submit">Submit</button>
+          <button class="form-button" type="submit">Submit</button>
         </div>
         <div class="form-footer">
-            Already a member ?<a href="javascript:void(0)" id="users_login_form">Login</a>
+          Already a member?
+          <a href="/#passwordforgot" id="users_login_form">Login</a>
         </div>
-    </form>
+      </form>
 
-
-
-    <form class="login-form" action="">
-        <div class="alert alert-success">
-        </div>
-        <div class="alert alert-danger">
-
-        </div>
+      <form class="login-form" action="">
+        <div class="alert alert-success"></div>
+        <div class="alert alert-danger"></div>
         <div class="form-header">
-            <h3>Login</h3>
+          <h3>Login</h3>
         </div>
         <!--Email Input-->
         <div class="form-group">
-            <input type="email"  name="Email" id="log_Email" class="form-input" placeholder="email@example.com"  required  data-pristine-required-message="Enter Valid Email Address">
+          <input
+            type="email"
+            name="Email"
+            id="log_Email"
+            class="form-input"
+            placeholder="email@example.com"
+            required
+            data-pristine-required-message="Enter Valid Email Address"
+          />
         </div>
         <!--Password Input-->
         <div class="form-group">
-            <input type="password" name="Password" id="log_Password" class="form-input" placeholder="password" required  data-pristine-required-message="Please Enter Password">
+          <input
+            type="password"
+            name="Password"
+            id="log_Password"
+            class="form-input"
+            placeholder="password"
+            required
+            data-pristine-required-message="Please Enter Password"
+          />
         </div>
         <!--Login Button-->
         <div class="form-group">
-            <input class="form-button" type="submit" value="Login">
+          <input class="form-button" type="submit" value="Login" />
         </div>
         <div class="form-footer">
-            Don't have an account? <a href="javascript:void(0)" id="register_form">Sign Up</a>
-            <br><a href="javascript:void(0)" id="user_forget_form">Forget Password?</a>
+          Don' t have an account?
+          <a href="/#signup" id="register_form">Sign Up</a>
+          <br /><a href="/#passwordforgot" id="user_forget_form"
+            >Forget Password?</a
+          >
         </div>
-    </form>
-    <form class="signup-form">
-        <div class="alert alert-danger">
-
-        </div>
+      </form>
+      <form class="signup-form">
+        <div class="alert alert-danger"></div>
         <div class="form-header">
-            <h3>Signup</h3>
+          <h3>Signup</h3>
         </div>
         <!--Email Input-->
         <div class="form-group">
-            <input type="text" name="Name" id='Name' class="form-input" placeholder="Name" required  data-pristine-required-message="Enter Your Name">
+          <input
+            type="text"
+            name="Name"
+            id="Name"
+            class="form-input"
+            placeholder="Name"
+            required
+            data-pristine-required-message="Enter Your Name"
+          />
         </div>
         <!--Email Input-->
         <div class="form-group">
-            <input type="email"  name="Email" id="Email" class="form-input" placeholder="email@example.com" required  data-pristine-required-message="Enter Valid Email Address">
+          <input
+            type="email"
+            name="Email"
+            id="Email"
+            class="form-input"
+            placeholder="email@example.com"
+            required
+            data-pristine-required-message="Enter Valid Email Address"
+          />
         </div>
         <!--Company Input-->
         <div class="form-group">
-            <input type="text"  name="Company" id="Company" class="form-input" placeholder="Company" required  data-pristine-required-message="Enter Company Name">
+          <input
+            type="text"
+            name="Company"
+            id="Company"
+            class="form-input"
+            placeholder="Company"
+            required
+            data-pristine-required-message="Enter Company Name"
+          />
         </div>
         <!--Address Input-->
         <div class="form-group">
-            <input type="text"  name="Address" id="Address" class="form-input" placeholder="Address"  required  data-pristine-required-message="Enter your Address">
+          <input
+            type="text"
+            name="Address"
+            id="Address"
+            class="form-input"
+            placeholder="Address"
+            required
+            data-pristine-required-message="Enter your Address"
+          />
         </div>
         <!--Telephone Input-->
         <div class="form-group">
-            <input type="text"  name="Telephone" id="Telephone" class="form-input" placeholder="Telephone"  required  data-pristine-required-message="Enter Telephone Number">
+          <input
+            type="text"
+            name="Telephone"
+            id="Telephone"
+            class="form-input"
+            placeholder="Telephone"
+            required
+            data-pristine-required-message="Enter Telephone Number"
+          />
         </div>
         <!--Password Input-->
         <div class="form-group">
-            <input type="password" name="Password" id="Password" class="form-input" placeholder="Password" required data-pristine-required-message="Please Enter Password">
+          <input
+            type="password"
+            name="Password"
+            id="Password"
+            class="form-input"
+            placeholder="Password"
+            required
+            data-pristine-required-message="Please Enter Password"
+          />
         </div>
-<!--        &lt;!&ndash;Password Input&ndash;&gt;-->
-<!--        <div class="form-group">-->
-<!--            <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-input" placeholder="Confirm Password">-->
-<!--        </div>-->
-<!--        &lt;!&ndash;Login Button&ndash;&gt;-->
+        <!--        &lt;!&ndash;Password Input&ndash;&gt;-->
+        <!--        <div class="form-group">-->
+        <!--            <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-input" placeholder="Confirm Password">-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;Login Button&ndash;&gt;-->
         <div class="form-group">
-            <input type="submit" value="Signup" class="form-button">
-<!--            <button class="form-button" type="button" onclick="SignupUser()">Signup</button>-->
+          <input type="submit" value="Signup" class="form-button" />
+          <!--            <button class="form-button" type="button" onclick="SignupUser()">Signup</button>-->
         </div>
         <div class="form-footer">
-            Already a member ?<a href="javascript:void(0)" id="user_login_form">Login</a>
+          Already a member? <a href="/#login" id="user_login_form">Login</a>
         </div>
-    </form>
-</div><!--/.wrap-->
+      </form>
+    </div>
+    <!--/.wrap-->
 
-<script src="js/vanilla.js"></script>
-<script src="js/pristine.min.js"></script>
-<script src="js/script.js"></script>
-</body>
+    <script src="js/common/helper.js"></script>
+    <script src="js/libs/pristine.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
