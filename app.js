@@ -14,11 +14,34 @@ app.use(express.static(__dirname + "/assets"));
 /*-------------------------------------------*/
 
 app.get("/", (req, res) => {
-  res.render("main.ejs");
+  res.render("main.ejs", {
+    mode: "login"
+  });
+});
+
+app.get("/login", (req, res) => {
+  res.render("main.ejs", {
+    mode: "login"
+  });
+});
+
+app.get("/signup", (req, res) => {
+  res.render("main.ejs", {
+    mode: "signup"
+  });
+});
+
+app.get("/passwordforgot", (req, res) => {
+  res.render("main.ejs", {
+    mode: "passwordforgot"
+  });
 });
 
 app.get("/logout", (req, res) => {
-  res.render("logout.ejs");
+  console.log(
+    "This is where we should invalidate the users record in the database"
+  );
+  res.redirect("/");
 });
 
 app.get("/app", (req, res) => {

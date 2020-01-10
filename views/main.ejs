@@ -37,7 +37,7 @@
         </div>
         <div class="form-footer">
           Already a member?
-          <a href="/#passwordforgot" id="users_login_form">Login</a>
+          <a href="/login" id="users_login_form">Login</a>
         </div>
       </form>
 
@@ -77,8 +77,8 @@
         </div>
         <div class="form-footer">
           Don' t have an account?
-          <a href="/#signup" id="register_form">Sign Up</a>
-          <br /><a href="/#passwordforgot" id="user_forget_form"
+          <a href="/signup" id="register_form">Sign Up</a>
+          <br /><a href="/passwordforgot" id="user_forget_form"
             >Forget Password?</a
           >
         </div>
@@ -170,7 +170,7 @@
           <!--            <button class="form-button" type="button" onclick="SignupUser()">Signup</button>-->
         </div>
         <div class="form-footer">
-          Already a member? <a href="/#login" id="user_login_form">Login</a>
+          Already a member? <a href="/login" id="user_login_form">Login</a>
         </div>
       </form>
     </div>
@@ -178,6 +178,9 @@
 
     <script src="js/common/helper.js"></script>
     <script src="js/libs/pristine.min.js"></script>
+    <script>
+      var mode = "<%=  mode%>";
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

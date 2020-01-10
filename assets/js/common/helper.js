@@ -1,9 +1,3 @@
-var user = window.localStorage.getItem("weld_user");
-var token = readCookie("weld_token");
-if (token != null) {
-  window.location.href = "/#login";
-}
-
 const $getId = id => {
   return document.getElementById(id);
 };

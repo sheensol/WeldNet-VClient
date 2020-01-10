@@ -1,28 +1,24 @@
-//Also need to run these commands based on hashbangs e.g. /#signup #/login /#passwordforgot
+//This is Duplication, bad practice
+if (mode === "signup") {
+  var login = document.querySelector(".login-form");
+  login.style.display = "none";
+  var forget = document.querySelector(".forget-form");
+  forget.style.display = "none";
+  var signup = document.querySelector(".signup-form");
+  signup.style.display = "block";
+}
 
-const reg = $getId("register_form");
-if (reg) {
-  reg.addEventListener("click", function(elem) {
-    var login = document.querySelector(".login-form");
-    login.style.display = "none";
-    var forget = document.querySelector(".forget-form");
-    forget.style.display = "none";
-    var signup = document.querySelector(".signup-form");
-    signup.style.display = "block";
-  });
+//This is Duplication, bad practice
+if (mode === "login") {
+  var login = document.querySelector(".login-form");
+  login.style.display = "block";
+  var forget = document.querySelector(".forget-form");
+  forget.style.display = "none";
+  var signup = document.querySelector(".signup-form");
+  signup.style.display = "none";
 }
-const log = $getId("user_login_form");
-if (log) {
-  log.addEventListener("click", function(elem) {
-    var login = document.querySelector(".login-form");
-    login.style.display = "block";
-    var forget = document.querySelector(".forget-form");
-    forget.style.display = "none";
-    var signup = document.querySelector(".signup-form");
-    signup.style.display = "none";
-  });
-}
-const fog = $getId("users_login_form");
+
+/*const fog = $getId("users_login_form");
 if (fog) {
   fog.addEventListener("click", function(elem) {
     var login = document.querySelector(".login-form");
@@ -32,35 +28,20 @@ if (fog) {
     var signup = document.querySelector(".signup-form");
     signup.style.display = "none";
   });
-}
+}*/
+
 /**
  *@function user forget pasword
  */
 
-const user_fog = $getId("user_forget_form");
-if (user_fog) {
-  user_fog.addEventListener("click", function(elem) {
-    var login = document.querySelector(".login-form");
-    login.style.display = "none";
-    var forget = document.querySelector(".forget-form");
-    forget.style.display = "block";
-    var signup = document.querySelector(".signup-form");
-    signup.style.display = "none";
-  });
-}
-const logout = $getId("logout");
-if (logout) {
-  logout.addEventListener("click", function(elem) {
-    elem.preventDefault();
-
-    var user = window.localStorage.getItem("weld_user");
-    var token = readCookie("weld_token");
-    if (user != null && token != null) {
-      window.localStorage.removeItem("weld_user");
-      createCookie("weld_token", "", -1);
-      window.location.href = "http://localhost/vanilajs/main.html";
-    }
-  });
+//This is Duplication, bad practice
+if (mode === "passwordforgot") {
+  var login = document.querySelector(".login-form");
+  login.style.display = "none";
+  var forget = document.querySelector(".forget-form");
+  forget.style.display = "block";
+  var signup = document.querySelector(".signup-form");
+  signup.style.display = "none";
 }
 
 /**
