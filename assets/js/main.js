@@ -1,21 +1,25 @@
-//This is Duplication, bad practice
-if (mode === "signup") {
-  var login = document.querySelector(".login-form");
-  login.style.display = "none";
-  var forget = document.querySelector(".forget-form");
-  forget.style.display = "none";
-  var signup = document.querySelector(".signup-form");
-  signup.style.display = "block";
-}
+const loginForm = document.querySelector(".login-form");
+const forgetForm = document.querySelector(".forget-form");
+const signupForm = document.querySelector(".signup-form");
 
 //This is Duplication, bad practice
 if (mode === "login") {
-  var login = document.querySelector(".login-form");
-  login.style.display = "block";
-  var forget = document.querySelector(".forget-form");
-  forget.style.display = "none";
-  var signup = document.querySelector(".signup-form");
-  signup.style.display = "none";
+  loginForm.style.display = "block";
+  forgetForm.style.display = "none";
+  signupForm.style.display = "none";
+}
+
+if (mode === "passwordforgot") {
+  loginForm.style.display = "none";
+  forgetForm.style.display = "block";
+  signupForm.style.display = "none";
+}
+
+//This is Duplication, bad practice
+if (mode === "signup") {
+  loginForm.style.display = "none";
+  forgetForm.style.display = "none";
+  signupForm.style.display = "block";
 }
 
 /*const fog = $getId("users_login_form");
@@ -35,14 +39,6 @@ if (fog) {
  */
 
 //This is Duplication, bad practice
-if (mode === "passwordforgot") {
-  var login = document.querySelector(".login-form");
-  login.style.display = "none";
-  var forget = document.querySelector(".forget-form");
-  forget.style.display = "block";
-  var signup = document.querySelector(".signup-form");
-  signup.style.display = "none";
-}
 
 /**
  * on windlow load to run

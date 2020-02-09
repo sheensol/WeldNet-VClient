@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WeldNet</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.a89af6ed.png">
+    <link rel="stylesheet" href="/app.ed7d1cf1.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/app.ed7d1cf1.js"></script></head>
+  <body>
+    <div class="wrap">
+      <form class="forget-form" action="">
+        <div class="alert alert-success"></div>
+        <div class="alert alert-danger"></div>
+        <div class="form-header">
+          <img src="/login_logo.5b71cb89.png" alt="login logo" class="login_logo">
+          <!--
+            <div class="incorrect">Incorrect Login Details</div>
+          -->
+        </div>
+        <!--Email Input-->
+        <label class="input-group input-group-one">
+          <input type="email" name="Email" id="fog_Email" class="form-input" placeholder="Email" required="" data-pristine-required-message="Enter Valid Email Address">
+        </label>
+
+        <!--Login Button-->
+        <div class="form-group">
+          <button class="btn" type="submit">Submit</button>
+        </div>
+        <div class="form-footer">
+          Already a member?
+          <a href="/login" id="users_login_form">Login</a>
+        </div>
+      </form>
+
+      <form class="login-form" action="">
+        <div class="alert alert-success"></div>
+        <div class="alert alert-danger"></div>
+        <div class="form-header">
+          <img src="/login_logo.5b71cb89.png" alt="login logo" class="login_logo">
+          <!--
+            <div class="incorrect">Incorrect Login Details</div>
+          -->
+        </div>
+        <!--Email Input-->
+        <label class="input-group">
+          <input type="email" name="Email" id="log_Email" class="form-input" placeholder="Email" required="" data-pristine-required-message="Enter Valid Email Address">
+        </label>
+        <!--Password Input-->
+        <label class="input-group">
+          <input type="password" name="Password" id="log_Password" class="form-input" placeholder="Password" required="" data-pristine-required-message="Please Enter Password">
+        </label>
+        <!--Login Button-->
+        <div class="form-group">
+          <input class="btn" type="submit" value="Login">
+        </div>
+        <div class="form-footer">
+          Don't have an account?
+          <a href="/signup" id="register_form">Sign Up</a>
+          <br><a href="/passwordforgot" id="user_forget_form">Forget Password?</a>
+        </div>
+      </form>
+      <form class="signup-form">
+        <div class="alert alert-danger"></div>
+        <div class="form-header">
+          <img src="/login_logo.5b71cb89.png" alt="login logo" class="login_logo">
+          <!--
+            <div class="incorrect">Incorrect Login Details</div>
+          -->
+        </div>
+        <!--Email Input-->
+        <label class="input-group">
+          <input type="text" name="Name" id="Name" class="form-input" placeholder="Name" required="" data-pristine-required-message="Enter Your Name">
+        </label>
+        <!--Email Input-->
+        <label class="input-group">
+          <input type="email" name="Email" id="Email" class="form-input" placeholder="Email" required="" data-pristine-required-message="Enter Valid Email Address">
+        </label>
+        <!--Company Input-->
+        <label class="input-group">
+          <input type="text" name="Company" id="Company" class="form-input" placeholder="Company" required="" data-pristine-required-message="Enter Company Name">
+        </label>
+        <!--Address Input-->
+        <label class="input-group">
+          <input type="text" name="Address" id="Address" class="form-input" placeholder="Address" required="" data-pristine-required-message="Enter your Address">
+        </label>
+        <!--Telephone Input-->
+        <label class="input-group">
+          <input type="text" name="Telephone" id="Telephone" class="form-input" placeholder="Telephone" required="" data-pristine-required-message="Enter Telephone Number">
+        </label>
+        <!--Password Input-->
+        <label class="input-group">
+          <input type="password" name="Password" id="Password" class="form-input" placeholder="Password" required="" data-pristine-required-message="Please Enter Password">
+        </label>
+        <!--        &lt;!&ndash;Password Input&ndash;&gt;-->
+        <!--        <div class="form-group">-->
+        <!--            <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-input" placeholder="Confirm Password">-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;Login Button&ndash;&gt;-->
+        <div class="form-group">
+          <input type="submit" value="Signup" class="btn">
+          <!--            <button class="btn" type="button" onclick="SignupUser()">Signup</button>-->
+        </div>
+        <div class="form-footer">
+          Already a member? <a href="/login" id="user_login_form">Login</a>
+        </div>
+      </form>
+    </div>
+    <!--/.wrap-->
+
+    <script src="/helper.6bc7a2f6.js"></script>
+    <script src="/pristine.min.3ca43bc8.js"></script>
+    <script>var mode = "<%=  mode%>";</script>
+    <script src="/main.fb6bbcaf.js"></script>
+  </body>
+</html>
