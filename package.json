@@ -20,7 +20,7 @@
   "homepage": "https://github.com/sheensol/WeldNet-VClient#readme",
   "dependencies": {
     "ejs": "^3.0.1",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
